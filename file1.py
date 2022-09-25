@@ -40,8 +40,15 @@ l = [str(random.randint(1,10)) for i in range(1, 30)]
 r = list(filter(h, l))
 print(r)
 
+# 4) Реализуйте алгоритм перемешивания списка (Ранее задача была решена через random.shuffle. В этот раз сделала примитивным способом)
+n = int(input())
+l = [i for i in range(1, n+1)]
+g = [i for i in range(1, n+1) if i%2==0]
+t = [i for i in range(1, n+1) if not i%2==0]
+res = [x for y in zip(g, t) for x in y]
+print(res)
 
-# 4) Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных (ранее данное задание не было выполнено)
+# 5) Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных (ранее данное задание не было выполнено)
 
 def main():
     rle = "WWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW"
